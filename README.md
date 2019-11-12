@@ -1,4 +1,4 @@
-# Quiz Generator
+# 1. Running Angular Part
 
 ## Get the Code
 ```
@@ -11,7 +11,7 @@ npm i
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-# Running Microserver 
+# 2. Running Microserver 
 
 ## Get the Code
 ```
