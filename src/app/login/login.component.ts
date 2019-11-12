@@ -34,6 +34,7 @@ this.service.mymet(loginJson).subscribe(data => {
 
  if(data.status==="success"){
   console.log(data);
+  this.service.changeusername(this.userdetform.get('username').value);
    this.router.navigate(['/homepage']);
  }else{
   console.log(data);
