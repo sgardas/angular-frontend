@@ -29,7 +29,8 @@
 					<span class="login100-form-title-1">
 						Sign In
 					</span>
-		
+				   <br>
+					<div style="color:#85D6BA"><h2>{{errormsg}}</h2></div>
 
 				<form class="login100-form validate-form" [formGroup]="userdetform" >
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
@@ -45,7 +46,7 @@
                     </div>
                     
                     <div class="container-login100-form-btn" >
-						<button class="login100-form-btn" style="margin-left:65px" type="button"  
+						<button class="login100-form-btn" style="margin-left:65px; background-color:#85D6BA; font-size:22px; " type="button"  
 						(click)="onLoginClick()" >
 						<strong>Login</strong>	
 						</button>

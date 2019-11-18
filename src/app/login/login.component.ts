@@ -39,7 +39,8 @@ this.service.mymet(loginJson).subscribe(data => {
  }else{
 
   console.log(data);
-  alert('please enter valid credentials');
+  //alert('please enter valid credentials');
+  this.errormsg="Invalid username or password";
  }
 });
 
