@@ -18,6 +18,8 @@ export class QuizpageComponent implements OnInit {
   data: any;
   username: string;
   url='http://localhost:8081/quiz/'; //PORT 8081
+  timeLeft: number = 60;
+  counter:number=0;
 
   ngOnInit(): void {
     this.service.optionObservable.subscribe(update =>this.option = update);
@@ -37,6 +39,18 @@ export class QuizpageComponent implements OnInit {
 constructor(private http: HttpClient, private router: Router, private service: TopicServiceService) {}
 
 
+public startTimer(){
+  
+     function timeIt(){
+       this.counter++;
+       
+     }
+
+     setInterval(timeIt,1000);
+
+  }
+
+
 public start(){
   if(this.option=='Sports'){
     //this.data = sports;
@@ -48,6 +62,7 @@ public start(){
       //this.data = JSON.stringify(data.json);
       this.data = data;
       this.generate(0);
+     this.startTimer();
     });
   }
   else if(this.option=='Music'){
@@ -59,6 +74,7 @@ public start(){
       //this.data = JSON.stringify(data.json);
       this.data = data;
       this.generate(0);
+     // this.startTimer();
     });
   }
   else if(this.option=='Node.js'){
@@ -70,6 +86,7 @@ public start(){
       //this.data = JSON.stringify(data.json);
       this.data = data;
       this.generate(0);
+    //  this.startTimer();
     });
   }
   else{
