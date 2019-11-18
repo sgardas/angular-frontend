@@ -50,7 +50,7 @@
     },
     {
         "qnum" :"7.",
-        "q" : "In the men's singles 2018 Australian Open Championship, who did Roger Federer defeat to win the championship?",
+        "q" : " Who did Roger Federer defeat in the men's singles 2018 Australian Open Championship?",
         "opt1" : "Ralph Nadal",
         "opt2" : "Novak Djokovic",
         "opt3" : "Marin Cilic",
@@ -66,7 +66,7 @@
     },
     {
         "qnum" :"9.",
-        "q" : "In a professional tour game in tennis, the chair umpire may call a point penalty upon?",
+        "q" : "In a professional tennis, the chair umpire may call a point penalty upon?",
         "opt1" : "First violation",
         "opt2" : "Second violation",
         "opt3" : "Third violation",

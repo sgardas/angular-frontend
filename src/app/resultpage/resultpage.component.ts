@@ -7,15 +7,15 @@ templateUrl: './resultpage.component.html',
 styleUrls: ['./resultpage.component.css']
 })
 export class ResultpageComponent implements OnInit {
-score: number;
-total: number;
+correct: number;
+incorrect: number;
     username: string;
 
 constructor(private router: Router, private service: TopicServiceService) { }
 
 ngOnInit(): void {
-this.service.scoreObservable.subscribe(update =>this.score = update);
-this.service.totalObservable.subscribe(update =>this.total = update);
+this.service.correctObservable.subscribe(update =>this.correct = update);
+this.service.incorrectObservable.subscribe(update =>this.incorrect = update);
 this.service.usernameObservable.subscribe(update =>this.username = update);
 }
 retakeQuiz(){

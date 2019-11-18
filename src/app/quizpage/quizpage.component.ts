@@ -33,6 +33,7 @@ export class QuizpageComponent implements OnInit {
 
   i:number = 0;
   correctCount:number = 0 ;
+  incorrectCount:number = 0 ;
   index:number;
  
  
@@ -142,13 +143,13 @@ public checkAnswer() {
         
     }
     else{
-      console.log("in else");
+      this.incorrectCount++;
     }
     // increment i for next question
     this.i++;
     if(this.data.length-1 < this.i){
       
-      this.service.changescore(this.correctCount,this.data.length );
+      this.service.changescore(this.correctCount,this.incorrectCount);
       this.router.navigate(['/resultpage']);
       
       }
