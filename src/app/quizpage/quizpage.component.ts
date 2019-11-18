@@ -143,11 +143,12 @@ public checkAnswer() {
         
     }
     else{
-      this.incorrectCount++;
+      
     }
     // increment i for next question
     this.i++;
     if(this.data.length-1 < this.i){
+      this.incorrectCount = (this.data.length-this.correctCount);
       
       this.service.changescore(this.correctCount,this.incorrectCount);
       this.router.navigate(['/resultpage']);
