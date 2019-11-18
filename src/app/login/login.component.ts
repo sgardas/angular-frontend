@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import  data  from  '../../data/login.json';
+
 import { Router } from '@angular/router';
 import {TopicServiceService} from '../topic-service.service';
 import { FormControl, FormGroup } from '@angular/forms';
@@ -37,6 +37,7 @@ this.service.mymet(loginJson).subscribe(data => {
   this.service.changeusername(this.userdetform.get('username').value);
    this.router.navigate(['/homepage']);
  }else{
+
   console.log(data);
   alert('please enter valid credentials');
  }

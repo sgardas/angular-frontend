@@ -222,10 +222,9 @@ a {
   .label-input100 {
   font-family: Poppins-Regular;
   font-size: 15px;
-  color: #808080 ;
+  color: white ;
   line-height: 1.2;
   text-align: right;
-  
   position: absolute;
   top: 14px;
   left: -105px;
@@ -236,7 +235,7 @@ a {
   .input100 {
   font-family: Poppins-Regular;
   font-size: 15px;
-  color: #555555 ;
+  color:white ;
   line-height: 1.2;
   
   display: block;

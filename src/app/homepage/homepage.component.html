@@ -14,7 +14,7 @@
                 </p>
              
                 <div style="font-size: 30px; color: white; display: inline-block;position:absolute; right:10px;">
-                       <button id="btn" (click)= "logout()"> <b> Logout </b> </button>
+                       <button id="btn" (click)= "logout()" style="font-family:Great vibes cursive;"> <b> LOGOUT </b> </button>
                  
                     </div> 
             </div>
@@ -22,14 +22,20 @@
       
             <form >
             <br><br>
-                <h2 style="color: rgb(10, 2, 2);">Select your Quiz topic </h2>
+
+            <div class="roundback">
                 
-                <select [(ngModel)]="topic" name=" " style="width: 200px;">
-                <option *ngFor="let item of data" [value]="item.name " > {{item.name | uppercase}}</option>
+                <div class="cont">
+                <h2 style="color: rgb(7, 77, 23); font-style:italic;">Select your Quiz topic </h2>
+                
+                <select [(ngModel)]="topic" name=" " style="width: 200px; border-color:rgb(7,77, 23); border-width:1px; background-color: rgba(205, 230, 241, 0.3);">
+                <option *ngFor="let item of data" [value]="item.name "  > {{item.name | uppercase}}</option>
                 </select>
                 <br><br>
                 <button class="btn-btn-primary " (click)="loadQuiz(topic)"> Submit </button>
-              
+
+                 </div>        
+        </div> 
              </form>
 
        
