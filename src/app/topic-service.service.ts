@@ -21,11 +21,11 @@ export class TopicServiceService {
   public option = new BehaviorSubject('');
   optionObservable = this.option.asObservable();
 
-  public score = new BehaviorSubject(0);
-  scoreObservable = this.score.asObservable();
+  public correct = new BehaviorSubject(0);
+  correctObservable = this.correct.asObservable();
 
-  public total = new BehaviorSubject(0);
-  totalObservable = this.total.asObservable();
+  public incorrect = new BehaviorSubject(0);
+  incorrectObservable = this.incorrect.asObservable();
 
   public username = new BehaviorSubject('');
   usernameObservable = this.username.asObservable();
@@ -39,9 +39,9 @@ export class TopicServiceService {
     this.option.next(option);
   }
 
-  changescore(score: number, total: number){
-    this.score.next(score);
-    this.total.next(total);
+  changescore(correct: number, incorrect: number){
+    this.correct.next(correct);
+    this.incorrect.next(incorrect);
   }
 
   changeusername(username: string){
