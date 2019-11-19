@@ -6,7 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
-<body>
+<body style="background-image: url(./assets/images/haha.jpg); background-size: cover;">
+	
+
 		<div class="nav" >
     
 				<div class="nav-header" >
@@ -14,20 +16,21 @@
 				  
 				<div class="nav-title"  >
 				</div> 
-				<div style="font-size: 30px; color: white; display: inline-block;position:absolute; align-content: center;">
+				<div style="font-size: 30px; color: white; display: inline-block;position:absolute; left:670px; font-family:Great vibes cursive;">
 					 Quiz Generator
 				</div> 
 				</div>
 			</div>
 
-	<div class="limiter">
+	
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<div class="login100-form-title" style="background-image: url(./assets/images/bg-01.jpg);">
+				<div class="login100-form-title" style="background-image: url(./assets/images/haha.jpg);">
 					<span class="login100-form-title-1">
 						Sign In
 					</span>
-				</div>
+				   <br>
+					<div style="color:#85D6BA"><h2>{{errormsg}}</h2></div>
 
 				<form class="login100-form validate-form" [formGroup]="userdetform" >
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
@@ -42,17 +45,16 @@
 						<span class="focus-input100"></span>
                     </div>
                     
-                    <div class="container-login100-form-btn">
-						<button class="login100-form-btn" style="margin-left:90px" type="button" 
+                    <div class="container-login100-form-btn" >
+						<button class="login100-form-btn" style="margin-left:65px; background-color:#85D6BA; font-size:22px; " type="button"  
 						(click)="onLoginClick()" >
-							Login
+						<strong>Login</strong>	
 						</button>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-	
 
 </body>
 </html>

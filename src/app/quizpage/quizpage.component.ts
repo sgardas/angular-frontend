@@ -18,6 +18,8 @@ export class QuizpageComponent implements OnInit {
   data: any;
   username: string;
   url='http://localhost:8081/quiz/'; //PORT 8081
+  timeLeft: number = 60;
+  counter:number=0;
 
   ngOnInit(): void {
     this.service.optionObservable.subscribe(update =>this.option = update);
@@ -31,10 +33,23 @@ export class QuizpageComponent implements OnInit {
 
   i:number = 0;
   correctCount:number = 0 ;
+  incorrectCount:number = 0 ;
   index:number;
  
  
 constructor(private http: HttpClient, private router: Router, private service: TopicServiceService) {}
+
+
+public startTimer(){
+  
+     function timeIt(){
+       this.counter++;
+       
+     }
+
+     setInterval(timeIt,1000);
+
+  }
 
 
 public start(){
@@ -48,6 +63,7 @@ public start(){
       //this.data = JSON.stringify(data.json);
       this.data = data;
       this.generate(0);
+     this.startTimer();
     });
   }
   else if(this.option=='Music'){
@@ -59,6 +75,7 @@ public start(){
       //this.data = JSON.stringify(data.json);
       this.data = data;
       this.generate(0);
+     // this.startTimer();
     });
   }
   else if(this.option=='Node.js'){
@@ -70,6 +87,7 @@ public start(){
       //this.data = JSON.stringify(data.json);
       this.data = data;
       this.generate(0);
+    //  this.startTimer();
     });
   }
   else{
@@ -125,13 +143,14 @@ public checkAnswer() {
         
     }
     else{
-      console.log("in else");
+      
     }
     // increment i for next question
     this.i++;
     if(this.data.length-1 < this.i){
+      this.incorrectCount = (this.data.length-this.correctCount);
       
-      this.service.changescore(this.correctCount,this.data.length );
+      this.service.changescore(this.correctCount,this.incorrectCount);
       this.router.navigate(['/resultpage']);
       
       }
