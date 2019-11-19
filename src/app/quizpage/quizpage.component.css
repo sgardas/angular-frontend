@@ -22,39 +22,47 @@
     background-color: lightseagreen;
     }
     #q {
+      color: black;
     margin-top: 30px;
     font-size: 30px;
     
     }
     #qnum {
+        color:black;
         margin-top: 30px;
         font-size: 30px;
         
         }
     #opt1 {
+      color: white;
     margin: 0 10px 0 10px;
     font-size: 30px;
     
     }
     #opt2 {
+      color: white;
     margin: 0 10px 0 10px;
     font-size: 30px;
     
     }
     #opt3 {
+      color: white;
     margin: 0 10px 0 10px;
     font-size: 30px;
     
     }
     #optt1 {
+      color: black;
     font-size: 20px;
     
     }
     #optt2 {
+      color: black;
     font-size: 20px;
     
     }
     #optt3 {
+      color: black;
     font-size: 20px;
     
     }
